@@ -46,7 +46,7 @@ $(function() {
             // second click should be true
             menuIconElem.trigger('click');
             expect(body.hasClass('menu-hidden')).toEqual(true);
-        })
+        });
     });
 
     describe('Initial Entries', function() {
@@ -63,7 +63,7 @@ $(function() {
 
             expect(feedsCount).toBeGreaterThan(0);
             done();
-        })
+        });
     });
 
     describe('New Feed Selection', function() {
@@ -86,7 +86,7 @@ $(function() {
 
             expect(firstFeedContent).not.toEqual(secondFeedContent);
             done();
-        })
+        });
 
     });
 }());
