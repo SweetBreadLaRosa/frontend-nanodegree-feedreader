@@ -71,15 +71,14 @@ $(function() {
         var firstFeedContent;
         var secondFeedContent;
 
-        // only call done after loading a new index
         beforeEach(function(done) {
             loadFeed(0, function() {
                 firstFeedContent = $('.feed').has('h2')[0].innerText;
-            });
 
-            loadFeed(1, function() {
-                secondFeedContent = $('.feed').has('h2')[0].innerText;
-                done();
+                loadFeed(1, function() {
+                    secondFeedContent = $('.feed').has('h2')[0].innerText;
+                    done();
+                });
             });
         });
 
