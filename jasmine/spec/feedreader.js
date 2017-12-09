@@ -46,9 +46,11 @@ $(function() {
          * hiding/showing of the menu element.
          */
 
-        it('menu element should be hidden by default', function() {
-            var body = $('body');
+        // moved these here because of usage between more than one test
+        var body = $('body');
+        var menuIconElem = $('.menu-icon-link');
 
+        it('menu element should be hidden by default', function() {
             expect(body.hasClass('menu-hidden')).toEqual(true);
         });
 
@@ -58,9 +60,6 @@ $(function() {
          * clicked and does it hide when clicked again.
          */
         it('should toggle visibility of menu element when clicked', function() {
-            var body = $('body');
-            var menuIconElem = $('.menu-icon-link');
-
 
             // initial click should be false
             menuIconElem.trigger('click');
